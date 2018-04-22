@@ -1,1 +1,44 @@
 # kube-universe
+![kube universe logo](images/logo.png)
+---
+
+# Overview
+Kube-Universe renders a Kubernetes cluster into a dynamic 3D graph. An example landscape visualization can be found [here](images/universe.png).
+
+# Features
+* 3D cluster overview
+* Identify pods with errors
+
+# Installation and Usage
+
+Get the `kube-universe` binary
+```
+go get github.com/afritzler/kube-universe
+```
+Start `kube-universe` locally
+```
+garden-kube serve --kubeconfig=PATH_TO_MY_KUBECONFIG
+```
+The web UI can be accessed via http://localhost:3000 and the rendered graph under http://localhost:3000/graph.
+With the `--port` flag you can also specify under which port the garden universe server should be exposed (default is 3000).
+
+# Development
+
+To build and run the garden universe
+```
+git clone https://github.com/afritzler/kube-universe $GOPATH/src/github.com/afritzler/kube-universe
+cd $GOPATH/src/github.com/afritzler/kube-universe
+go run *.go serve --kubeconfig=PATH_TO_MY_KUBECONFIG
+```
+or to build and run it using the executable
+```
+make
+./kube-universe serve --kubeconfig=PATH_TO_MY_KUBECONFIG
+```
+To build the Docker image
+```
+cd $GOPATH/src/github.com/afritzler/kube-universe
+make docker-build
+```
+# Acknowledgements
+Garden universe is using [3d-force-graph](https://github.com/vasturiano/3d-force-graph) for rendering. 
