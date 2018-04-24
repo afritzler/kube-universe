@@ -23,10 +23,13 @@
           })
           .nodeOpacity(1)
           .nodeAutoColorBy(function(n){
-            if (n.seed) {
-              return "seed"
+            if (n.type == "namespace") {
+              return n.type
+            } else if (n.type == "pod") {
+              return n.namespace
+            } else if (n.type == "node") {
+              return n.type
             }
-            return "shoot-" + n.project
           })
           .nodeVal(function(n){
             if (n.seed) {
@@ -35,17 +38,34 @@
             return 0.5
           })
           .nodeThreeObject(function(n){
-            if (n.hasOwnProperty('status')) {
+            if (n.type == "pod" && n.hasOwnProperty('status')) {
               var mesh = new THREE.Mesh(
-                //new Date().getTime()/1000 % 2 ? new THREE.DodecahedronGeometry(5) : new THREE.SphereGeometry(5),
                 new THREE.DodecahedronGeometry(10),
                 new THREE.MeshLambertMaterial({
                   color: Math.round(Math.random() * Math.pow(2, 24)),
                   transparent: false,
                   opacity: 1
               }))
-              // mesh.geometry.dynamic = true;
-              // mesh.geometry.verticesNeedUpdate = true;
+              return mesh
+            }
+            if (n.type == "node") {
+              var mesh = new THREE.Mesh(
+                new THREE.BoxGeometry(10,10,10),
+                new THREE.MeshLambertMaterial({
+                  color: Math.round(Math.random() * Math.pow(2, 24)),
+                  transparent: false,
+                  opacity: 1
+              }))
+              return mesh
+            }
+            if (n.type == "namespace") {
+              var mesh = new THREE.Mesh(
+                new THREE.DodecahedronGeometry(5),
+                new THREE.MeshLambertMaterial({
+                  color: Math.round(Math.random() * Math.pow(2, 24)),
+                  transparent: false,
+                  opacity: 1
+              }))
               return mesh
             }
           })

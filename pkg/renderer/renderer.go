@@ -24,6 +24,12 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 )
 
+const (
+	namespaceType = "namespace"
+	podType       = "pod"
+	nodeType      = "node"
+)
+
 func GetGraph(kubeconfig string) ([]byte, error) {
 	// use the current context in kubeconfig
 	config, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
@@ -36,12 +42,16 @@ func GetGraph(kubeconfig string) ([]byte, error) {
 		return nil, fmt.Errorf("failed to create clientset for kubeconfig: %s", err)
 	}
 
+	nodes := make(map[string]*kutype.Node)
+	links := make([]kutype.Link, 0)
+
 	namespaces, err := clientset.CoreV1().Namespaces().List(metav1.ListOptions{})
 	if err != nil {
 		return nil, fmt.Errorf("failed to get namespaces: %s", err)
 	}
 	for _, n := range namespaces.Items {
-		fmt.Println(n.Name)
+		key := fmt.Sprintf("%s-%s", namespaceType, n.Name)
+		nodes[key] = &kutype.Node{Id: key, Name: n.Name, Type: namespaceType, Namespace: n.Namespace}
 	}
 
 	pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{})
@@ -49,7 +59,12 @@ func GetGraph(kubeconfig string) ([]byte, error) {
 		return nil, fmt.Errorf("failed to get pods: %s", err)
 	}
 	for _, p := range pods.Items {
-		fmt.Println(p.Name)
+		podKey := fmt.Sprintf("%s-%s", p.Namespace, p.Name)
+		namespaceKey := fmt.Sprintf("%s-%s", namespaceType, p.Namespace)
+		nodeKey := fmt.Sprintf("%s-%s", nodeType, p.Spec.NodeName)
+		nodes[podKey] = &kutype.Node{Id: podKey, Name: p.Name, Type: podType, Namespace: p.Namespace, Status: p.Status.Message}
+		links = append(links, kutype.Link{Source: namespaceKey, Target: podKey, Value: 0})
+		links = append(links, kutype.Link{Source: podKey, Target: nodeKey, Value: 0})
 	}
 
 	clusterNodes, err := clientset.CoreV1().Nodes().List(metav1.ListOptions{})
@@ -57,11 +72,9 @@ func GetGraph(kubeconfig string) ([]byte, error) {
 		return nil, fmt.Errorf("failed to get nodes: %s", err)
 	}
 	for _, n := range clusterNodes.Items {
-		fmt.Println(n.Name)
+		key := fmt.Sprintf("%s-%s", nodeType, n.Name)
+		nodes[key] = &kutype.Node{Id: key, Name: n.Name, Type: nodeType, Namespace: n.Namespace, Status: string(n.Status.Phase)}
 	}
-
-	nodes := make(map[string]*kutype.Node)
-	links := make([]kutype.Link, 0)
 
 	data, err := json.MarshalIndent(kutype.Graph{Nodes: values(nodes), Links: &links}, "", "	")
 	if err != nil {

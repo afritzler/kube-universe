@@ -176,7 +176,7 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "e73bf333ef8920dbb52ad18d4bd38ad9d9bc76d7"
+  revision = "2b6c08872f4b66da917bb4ce98df4f0307330f78"
 
 [[projects]]
   branch = "master"
@@ -272,7 +272,7 @@
     "storage/v1alpha1",
     "storage/v1beta1"
   ]
-  revision = "1c973d529bdf4c4f349357ca665fb8e1d13e2d0d"
+  revision = "6ef9db38b7d4d02a221e7af3e7f508ff19706fc6"
 
 [[projects]]
   name = "k8s.io/apimachinery"
