@@ -1,0 +1,834 @@
+{
+	"nodes": [
+		{
+			"id": "kube-system-pod-checkpointer-mgwn7",
+			"namespace": "kube-system",
+			"name": "pod-checkpointer-mgwn7",
+			"type": "pod"
+		},
+		{
+			"id": "nginx-ingress-nginx-ingress-controller-dqwnw",
+			"namespace": "nginx-ingress",
+			"name": "nginx-ingress-controller-dqwnw",
+			"type": "pod"
+		},
+		{
+			"id": "node-test-master-1",
+			"namespace": "",
+			"name": "test-master-1",
+			"type": "node"
+		},
+		{
+			"id": "kube-system-kube-controller-manager-56f5ffc6d-snq5c",
+			"namespace": "kube-system",
+			"name": "kube-controller-manager-56f5ffc6d-snq5c",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-etcd-0001",
+			"namespace": "kube-system",
+			"name": "kube-etcd-0001",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-etcd-backup-sidecar-79f76685d-whg64",
+			"namespace": "kube-system",
+			"name": "kube-etcd-backup-sidecar-79f76685d-whg64",
+			"type": "pod"
+		},
+		{
+			"id": "node-test-worker-2",
+			"namespace": "",
+			"name": "test-worker-2",
+			"type": "node"
+		},
+		{
+			"id": "kube-system-heapster-c8fb4f746-9s7b8",
+			"namespace": "kube-system",
+			"name": "heapster-c8fb4f746-9s7b8",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-controller-manager-56f5ffc6d-nlg5x",
+			"namespace": "kube-system",
+			"name": "kube-controller-manager-56f5ffc6d-nlg5x",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-proxy-hjf9m",
+			"namespace": "kube-system",
+			"name": "kube-proxy-hjf9m",
+			"type": "pod"
+		},
+		{
+			"id": "namespace-kube-system",
+			"namespace": "",
+			"name": "kube-system",
+			"type": "namespace"
+		},
+		{
+			"id": "kube-system-kube-dns-52nns",
+			"namespace": "kube-system",
+			"name": "kube-dns-52nns",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-etcd-network-checkpointer-42qnw",
+			"namespace": "kube-system",
+			"name": "kube-etcd-network-checkpointer-42qnw",
+			"type": "pod"
+		},
+		{
+			"id": "nginx-ingress-nginx-default-backend-74f5ccc879-47qrv",
+			"namespace": "nginx-ingress",
+			"name": "nginx-default-backend-74f5ccc879-47qrv",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-etcd-0002",
+			"namespace": "kube-system",
+			"name": "kube-etcd-0002",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-flannel-c27nw",
+			"namespace": "kube-system",
+			"name": "kube-flannel-c27nw",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-proxy-cg6j4",
+			"namespace": "kube-system",
+			"name": "kube-proxy-cg6j4",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-controller-manager-56f5ffc6d-p88kl",
+			"namespace": "kube-system",
+			"name": "kube-controller-manager-56f5ffc6d-p88kl",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-pod-checkpointer-grkwm",
+			"namespace": "kube-system",
+			"name": "pod-checkpointer-grkwm",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-apiserver-vqhwr",
+			"namespace": "kube-system",
+			"name": "kube-apiserver-vqhwr",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-dns-lqns2",
+			"namespace": "kube-system",
+			"name": "kube-dns-lqns2",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-etcd-0000",
+			"namespace": "kube-system",
+			"name": "kube-etcd-0000",
+			"type": "pod"
+		},
+		{
+			"id": "nginx-ingress-nginx-ingress-controller-7jw7d",
+			"namespace": "nginx-ingress",
+			"name": "nginx-ingress-controller-7jw7d",
+			"type": "pod"
+		},
+		{
+			"id": "nginx-ingress-nginx-ingress-controller-hfl79",
+			"namespace": "nginx-ingress",
+			"name": "nginx-ingress-controller-hfl79",
+			"type": "pod"
+		},
+		{
+			"id": "node-test-worker-1",
+			"namespace": "",
+			"name": "test-worker-1",
+			"type": "node"
+		},
+		{
+			"id": "namespace-nginx-ingress",
+			"namespace": "",
+			"name": "nginx-ingress",
+			"type": "namespace"
+		},
+		{
+			"id": "kube-system-kube-etcd-network-checkpointer-pj5zb",
+			"namespace": "kube-system",
+			"name": "kube-etcd-network-checkpointer-pj5zb",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-proxy-grfdp",
+			"namespace": "kube-system",
+			"name": "kube-proxy-grfdp",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-apiserver-rrh26",
+			"namespace": "kube-system",
+			"name": "kube-apiserver-rrh26",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-pod-checkpointer-lfxt2",
+			"namespace": "kube-system",
+			"name": "pod-checkpointer-lfxt2",
+			"type": "pod"
+		},
+		{
+			"id": "node-test-worker-0",
+			"namespace": "",
+			"name": "test-worker-0",
+			"type": "node"
+		},
+		{
+			"id": "kube-system-kube-scheduler-7c96f44db8-2rdv9",
+			"namespace": "kube-system",
+			"name": "kube-scheduler-7c96f44db8-2rdv9",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-scheduler-7c96f44db8-cb67m",
+			"namespace": "kube-system",
+			"name": "kube-scheduler-7c96f44db8-cb67m",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-pod-checkpointer-grkwm-test-master-0",
+			"namespace": "kube-system",
+			"name": "pod-checkpointer-grkwm-test-master-0",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-pod-checkpointer-lfxt2-test-master-2",
+			"namespace": "kube-system",
+			"name": "pod-checkpointer-lfxt2-test-master-2",
+			"type": "pod"
+		},
+		{
+			"id": "nginx-ingress-echoheaders-6cc4d8b98f-kbqlx",
+			"namespace": "nginx-ingress",
+			"name": "echoheaders-6cc4d8b98f-kbqlx",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-etcd-operator-75dcfcf4f7-5jcml",
+			"namespace": "kube-system",
+			"name": "etcd-operator-75dcfcf4f7-5jcml",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-apiserver-prpxm",
+			"namespace": "kube-system",
+			"name": "kube-apiserver-prpxm",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-flannel-h9zgv",
+			"namespace": "kube-system",
+			"name": "kube-flannel-h9zgv",
+			"type": "pod"
+		},
+		{
+			"id": "node-test-master-2",
+			"namespace": "",
+			"name": "test-master-2",
+			"type": "node"
+		},
+		{
+			"id": "kube-system-alertmanager-0",
+			"namespace": "kube-system",
+			"name": "alertmanager-0",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-dns-t27h4",
+			"namespace": "kube-system",
+			"name": "kube-dns-t27h4",
+			"type": "pod"
+		},
+		{
+			"id": "node-test-master-0",
+			"namespace": "",
+			"name": "test-master-0",
+			"type": "node"
+		},
+		{
+			"id": "namespace-default",
+			"namespace": "",
+			"name": "default",
+			"type": "namespace"
+		},
+		{
+			"id": "kube-system-kube-proxy-fjbt2",
+			"namespace": "kube-system",
+			"name": "kube-proxy-fjbt2",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-prometheus-0",
+			"namespace": "kube-system",
+			"name": "prometheus-0",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-pod-checkpointer-mgwn7-test-master-1",
+			"namespace": "kube-system",
+			"name": "pod-checkpointer-mgwn7-test-master-1",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-flannel-6jzqp",
+			"namespace": "kube-system",
+			"name": "kube-flannel-6jzqp",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-flannel-fz7vj",
+			"namespace": "kube-system",
+			"name": "kube-flannel-fz7vj",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kubernetes-dashboard-b4bfdc49f-tf5v2",
+			"namespace": "kube-system",
+			"name": "kubernetes-dashboard-b4bfdc49f-tf5v2",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-flannel-czqvd",
+			"namespace": "kube-system",
+			"name": "kube-flannel-czqvd",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-proxy-dwmkq",
+			"namespace": "kube-system",
+			"name": "kube-proxy-dwmkq",
+			"type": "pod"
+		},
+		{
+			"id": "namespace-kube-public",
+			"namespace": "",
+			"name": "kube-public",
+			"type": "namespace"
+		},
+		{
+			"id": "kube-system-grafana-8547fdf7cd-fpb6k",
+			"namespace": "kube-system",
+			"name": "grafana-8547fdf7cd-fpb6k",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-flannel-4sfwz",
+			"namespace": "kube-system",
+			"name": "kube-flannel-4sfwz",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-etcd-network-checkpointer-9n2pj",
+			"namespace": "kube-system",
+			"name": "kube-etcd-network-checkpointer-9n2pj",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-proxy-9wv6l",
+			"namespace": "kube-system",
+			"name": "kube-proxy-9wv6l",
+			"type": "pod"
+		},
+		{
+			"id": "kube-system-kube-scheduler-7c96f44db8-zvpvr",
+			"namespace": "kube-system",
+			"name": "kube-scheduler-7c96f44db8-zvpvr",
+			"type": "pod"
+		}
+	],
+	"links": [
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-alertmanager-0",
+			"value": 0
+		},
+		{
+			"source": "kube-system-alertmanager-0",
+			"target": "node-test-worker-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-etcd-operator-75dcfcf4f7-5jcml",
+			"value": 0
+		},
+		{
+			"source": "kube-system-etcd-operator-75dcfcf4f7-5jcml",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-grafana-8547fdf7cd-fpb6k",
+			"value": 0
+		},
+		{
+			"source": "kube-system-grafana-8547fdf7cd-fpb6k",
+			"target": "node-test-worker-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-heapster-c8fb4f746-9s7b8",
+			"value": 0
+		},
+		{
+			"source": "kube-system-heapster-c8fb4f746-9s7b8",
+			"target": "node-test-worker-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-apiserver-prpxm",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-apiserver-prpxm",
+			"target": "node-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-apiserver-rrh26",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-apiserver-rrh26",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-apiserver-vqhwr",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-apiserver-vqhwr",
+			"target": "node-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-controller-manager-56f5ffc6d-nlg5x",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-controller-manager-56f5ffc6d-nlg5x",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-controller-manager-56f5ffc6d-p88kl",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-controller-manager-56f5ffc6d-p88kl",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-controller-manager-56f5ffc6d-snq5c",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-controller-manager-56f5ffc6d-snq5c",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-dns-52nns",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-dns-52nns",
+			"target": "node-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-dns-lqns2",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-dns-lqns2",
+			"target": "node-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-dns-t27h4",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-dns-t27h4",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-etcd-0000",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-etcd-0000",
+			"target": "node-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-etcd-0001",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-etcd-0001",
+			"target": "node-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-etcd-0002",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-etcd-0002",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-etcd-backup-sidecar-79f76685d-whg64",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-etcd-backup-sidecar-79f76685d-whg64",
+			"target": "node-test-worker-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-etcd-network-checkpointer-42qnw",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-etcd-network-checkpointer-42qnw",
+			"target": "node-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-etcd-network-checkpointer-9n2pj",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-etcd-network-checkpointer-9n2pj",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-etcd-network-checkpointer-pj5zb",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-etcd-network-checkpointer-pj5zb",
+			"target": "node-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-flannel-4sfwz",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-flannel-4sfwz",
+			"target": "node-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-flannel-6jzqp",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-flannel-6jzqp",
+			"target": "node-test-worker-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-flannel-c27nw",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-flannel-c27nw",
+			"target": "node-test-worker-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-flannel-czqvd",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-flannel-czqvd",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-flannel-fz7vj",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-flannel-fz7vj",
+			"target": "node-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-flannel-h9zgv",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-flannel-h9zgv",
+			"target": "node-test-worker-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-proxy-9wv6l",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-proxy-9wv6l",
+			"target": "node-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-proxy-cg6j4",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-proxy-cg6j4",
+			"target": "node-test-worker-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-proxy-dwmkq",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-proxy-dwmkq",
+			"target": "node-test-worker-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-proxy-fjbt2",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-proxy-fjbt2",
+			"target": "node-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-proxy-grfdp",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-proxy-grfdp",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-proxy-hjf9m",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-proxy-hjf9m",
+			"target": "node-test-worker-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-scheduler-7c96f44db8-2rdv9",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-scheduler-7c96f44db8-2rdv9",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-scheduler-7c96f44db8-cb67m",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-scheduler-7c96f44db8-cb67m",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kube-scheduler-7c96f44db8-zvpvr",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kube-scheduler-7c96f44db8-zvpvr",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-kubernetes-dashboard-b4bfdc49f-tf5v2",
+			"value": 0
+		},
+		{
+			"source": "kube-system-kubernetes-dashboard-b4bfdc49f-tf5v2",
+			"target": "node-test-worker-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-pod-checkpointer-grkwm",
+			"value": 0
+		},
+		{
+			"source": "kube-system-pod-checkpointer-grkwm",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-pod-checkpointer-grkwm-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "kube-system-pod-checkpointer-grkwm-test-master-0",
+			"target": "node-test-master-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-pod-checkpointer-lfxt2",
+			"value": 0
+		},
+		{
+			"source": "kube-system-pod-checkpointer-lfxt2",
+			"target": "node-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-pod-checkpointer-lfxt2-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "kube-system-pod-checkpointer-lfxt2-test-master-2",
+			"target": "node-test-master-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-pod-checkpointer-mgwn7",
+			"value": 0
+		},
+		{
+			"source": "kube-system-pod-checkpointer-mgwn7",
+			"target": "node-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-pod-checkpointer-mgwn7-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "kube-system-pod-checkpointer-mgwn7-test-master-1",
+			"target": "node-test-master-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-kube-system",
+			"target": "kube-system-prometheus-0",
+			"value": 0
+		},
+		{
+			"source": "kube-system-prometheus-0",
+			"target": "node-test-worker-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-nginx-ingress",
+			"target": "nginx-ingress-echoheaders-6cc4d8b98f-kbqlx",
+			"value": 0
+		},
+		{
+			"source": "nginx-ingress-echoheaders-6cc4d8b98f-kbqlx",
+			"target": "node-test-worker-1",
+			"value": 0
+		},
+		{
+			"source": "namespace-nginx-ingress",
+			"target": "nginx-ingress-nginx-default-backend-74f5ccc879-47qrv",
+			"value": 0
+		},
+		{
+			"source": "nginx-ingress-nginx-default-backend-74f5ccc879-47qrv",
+			"target": "node-test-worker-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-nginx-ingress",
+			"target": "nginx-ingress-nginx-ingress-controller-7jw7d",
+			"value": 0
+		},
+		{
+			"source": "nginx-ingress-nginx-ingress-controller-7jw7d",
+			"target": "node-test-worker-0",
+			"value": 0
+		},
+		{
+			"source": "namespace-nginx-ingress",
+			"target": "nginx-ingress-nginx-ingress-controller-dqwnw",
+			"value": 0
+		},
+		{
+			"source": "nginx-ingress-nginx-ingress-controller-dqwnw",
+			"target": "node-test-worker-2",
+			"value": 0
+		},
+		{
+			"source": "namespace-nginx-ingress",
+			"target": "nginx-ingress-nginx-ingress-controller-hfl79",
+			"value": 0
+		},
+		{
+			"source": "nginx-ingress-nginx-ingress-controller-hfl79",
+			"target": "node-test-worker-1",
+			"value": 0
+		}
+	]
+}

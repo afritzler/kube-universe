@@ -1,0 +1,92 @@
+
+<head>
+    <style> body { margin: 0; } </style>
+    <script src="/js/three.min.js"></script>
+
+    <script src="/js/3d-force-graph.min.js"></script>
+  </head>
+  
+  <body>
+    <div id="3d-graph"></div>
+  
+    <script>
+      const elem = document.getElementById('3d-graph');
+      const Graph = ForceGraph3D()
+        (elem)
+          .jsonUrl('/graph')
+          .nodeLabel(function(n){
+            if (n.hasOwnProperty('status')) {
+              return n.name + '<br/>' + n.status
+            } else {
+              return n.name
+            }
+          })
+          .nodeOpacity(1)
+          .nodeAutoColorBy(function(n){
+            if (n.type == "namespace") {
+              return n.type
+            } else if (n.type == "pod") {
+              return n.namespace
+            } else if (n.type == "node") {
+              return n.type
+            }
+          })
+          .nodeVal(function(n){
+            if (n.seed) {
+              return 3
+            }
+            return 0.5
+          })
+          .nodeThreeObject(function(n){
+            if (n.type == "pod" && n.hasOwnProperty('status')) {
+              var mesh = new THREE.Mesh(
+                new THREE.DodecahedronGeometry(10),
+                new THREE.MeshLambertMaterial({
+                  color: Math.round(Math.random() * Math.pow(2, 24)),
+                  transparent: false,
+                  opacity: 1
+              }))
+              return mesh
+            }
+            if (n.type == "node") {
+              var mesh = new THREE.Mesh(
+                new THREE.BoxGeometry(10,10,10),
+                new THREE.MeshLambertMaterial({
+                  color: Math.round(Math.random() * Math.pow(2, 24)),
+                  transparent: false,
+                  opacity: 1
+              }))
+              return mesh
+            }
+            if (n.type == "namespace") {
+              var mesh = new THREE.Mesh(
+                new THREE.DodecahedronGeometry(5),
+                new THREE.MeshLambertMaterial({
+                  color: Math.round(Math.random() * Math.pow(2, 24)),
+                  transparent: false,
+                  opacity: 1
+              }))
+              return mesh
+            }
+          })
+          .linkAutoColorBy('value')
+          .linkWidth(0.5)
+          .linkDirectionalParticles(10)
+          .numDimensions(3)
+          .nodeResolution(15)
+          .linkDirectionalParticleSpeed(0.005)
+          .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
+          .onNodeClick(node => {
+            // Aim at node from outside it
+            const distance = 40;
+            const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+            Graph.cameraPosition(
+              { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }, 
+              node, // lookAt ({ x, y, z })
+              3000  // ms transition duration
+            );
+          });
+    </script>
+  </body>
+
+  
