@@ -5,7 +5,7 @@
 # Overview
 Kube-Universe renders a Kubernetes cluster into a dynamic 3D graph. An example landscape visualization can be found [here](images/universe.png).
 
-A __Demo Version__ is available [here](https://afritzler.github.io/kube-universe/web/demo/)
+A __Live Demo Version__ is available [here](https://afritzler.github.io/kube-universe/web/demo/)
 
 # Features
 * 3D cluster overview
