@@ -19,11 +19,12 @@ type Graph struct {
 }
 
 type Node struct {
-	Id        string `json:"id"`
-	Namespace string `json:"namespace"`
-	Name      string `json:"name"`
-	Type      string `json:"type"`
-	Status    string `json:"status,omitempty"`
+	Id            string `json:"id"`
+	Namespace     string `json:"namespace"`
+	Name          string `json:"name"`
+	Type          string `json:"type"`
+	Status        string `json:"status,omitempty"`
+	StatusMessage string `json:"statusmessage,omitempty"`
 }
 
 type Link struct {

@@ -15,8 +15,8 @@
         (elem)
           .jsonUrl('/graph')
           .nodeLabel(function(n){
-            if (n.hasOwnProperty('status')) {
-              return n.name + '<br/>' + n.status
+            if (n.type == "pod" && n.hasOwnProperty('status') && n.status != "Running") {
+              return n.name + '<br/> Status: ' + n.status + '<br/> StatusMsg: ' + n.statusmessage
             } else {
               return n.name
             }
@@ -38,7 +38,7 @@
             return 0.5
           })
           .nodeThreeObject(function(n){
-            if (n.type == "pod" && n.hasOwnProperty('status')) {
+            if (n.type == "pod" && n.hasOwnProperty('status') && n.status != "Running") {
               var mesh = new THREE.Mesh(
                 new THREE.DodecahedronGeometry(10),
                 new THREE.MeshLambertMaterial({

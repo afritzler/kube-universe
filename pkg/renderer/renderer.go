@@ -62,7 +62,13 @@ func GetGraph(kubeconfig string) ([]byte, error) {
 		podKey := fmt.Sprintf("%s-%s", p.Namespace, p.Name)
 		namespaceKey := fmt.Sprintf("%s-%s", namespaceType, p.Namespace)
 		nodeKey := fmt.Sprintf("%s-%s", nodeType, p.Spec.NodeName)
-		nodes[podKey] = &kutype.Node{Id: podKey, Name: p.Name, Type: podType, Namespace: p.Namespace, Status: p.Status.Message}
+		nodes[podKey] = &kutype.Node{
+			Id:            podKey,
+			Name:          p.Name,
+			Type:          podType,
+			Namespace:     p.Namespace,
+			Status:        string(p.Status.Phase),
+			StatusMessage: p.Status.Message}
 		links = append(links, kutype.Link{Source: namespaceKey, Target: podKey, Value: 0})
 		links = append(links, kutype.Link{Source: podKey, Target: nodeKey, Value: 0})
 	}
