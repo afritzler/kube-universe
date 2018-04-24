@@ -19,14 +19,14 @@ go get github.com/afritzler/kube-universe
 ```
 Start `kube-universe` locally
 ```
-garden-kube serve --kubeconfig=PATH_TO_MY_KUBECONFIG
+kube-universe serve --kubeconfig=PATH_TO_MY_KUBECONFIG
 ```
 The web UI can be accessed via http://localhost:3000 and the rendered graph under http://localhost:3000/graph.
-With the `--port` flag you can also specify under which port the garden universe server should be exposed (default is 3000).
+With the `--port` flag you can also specify under which port the kube universe server should be exposed (default is 3000).
 
 # Development
 
-To build and run the garden universe
+To build and run the kube universe
 ```
 git clone https://github.com/afritzler/kube-universe $GOPATH/src/github.com/afritzler/kube-universe
 cd $GOPATH/src/github.com/afritzler/kube-universe
@@ -43,4 +43,4 @@ cd $GOPATH/src/github.com/afritzler/kube-universe
 make docker-build
 ```
 # Acknowledgements
-Garden universe is using [3d-force-graph](https://github.com/vasturiano/3d-force-graph) for rendering. 
+Kube universe is using [3d-force-graph](https://github.com/vasturiano/3d-force-graph) for rendering. 
