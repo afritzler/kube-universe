@@ -1,9 +1,9 @@
 
 <head>
     <style> body { margin: 0; } </style>
-    <script src="/js/three.min.js"></script>
+    <script src="../js/three.min.js"></script>
 
-    <script src="/js/3d-force-graph.min.js"></script>
+    <script src="../js/3d-force-graph.min.js"></script>
   </head>
   
   <body>
@@ -13,7 +13,7 @@
       const elem = document.getElementById('3d-graph');
       const Graph = ForceGraph3D()
         (elem)
-          .jsonUrl('/graph')
+          .jsonUrl('data/graph.json')
           .nodeLabel(function(n){
             if (n.hasOwnProperty('status')) {
               return n.name + '<br/>' + n.status
