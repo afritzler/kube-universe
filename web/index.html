@@ -2,7 +2,7 @@
 <head>
     <style> body { margin: 0; } </style>
     <script src="/js/three.min.js"></script>
-
+    <script src="/js/three-spritetext.min.js"></script>
     <script src="/js/3d-force-graph.min.js"></script>
   </head>
   
@@ -59,14 +59,10 @@
               return mesh
             }
             if (n.type == "namespace") {
-              var mesh = new THREE.Mesh(
-                new THREE.DodecahedronGeometry(5),
-                new THREE.MeshLambertMaterial({
-                  color: Math.round(Math.random() * Math.pow(2, 24)),
-                  transparent: false,
-                  opacity: 1
-              }))
-              return mesh
+              const sprite = new SpriteText(n.name  );
+              sprite.color = n.color;
+              sprite.textHeight = 5;
+              return sprite;
             }
           })
           .linkAutoColorBy('value')
