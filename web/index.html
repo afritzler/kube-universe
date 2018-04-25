@@ -38,7 +38,8 @@
             return 0.5
           })
           .nodeThreeObject(function(n){
-            if (n.type == "pod" && n.hasOwnProperty('status') && n.status != "Running") {
+            if (n.type == "pod" && n.hasOwnProperty('status') 
+              && n.status != "Running" && n.status != "Succeeded") {
               var mesh = new THREE.Mesh(
                 new THREE.DodecahedronGeometry(10),
                 new THREE.MeshLambertMaterial({
@@ -59,7 +60,7 @@
               return mesh
             }
             if (n.type == "namespace") {
-              const sprite = new SpriteText(n.name  );
+              const sprite = new SpriteText(n.name);
               sprite.color = n.color;
               sprite.textHeight = 5;
               return sprite;
