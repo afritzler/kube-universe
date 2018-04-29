@@ -21,6 +21,12 @@ Start `kube-universe` locally
 ```
 kube-universe serve --kubeconfig=PATH_TO_MY_KUBECONFIG
 ```
+or just
+```
+kube-universe serve
+```
+if you are using minikube.
+
 The web UI can be accessed via http://localhost:3000 and the rendered graph under http://localhost:3000/graph.
 With the `--port` flag you can also specify under which port the kube universe server should be exposed (default is 3000).
 

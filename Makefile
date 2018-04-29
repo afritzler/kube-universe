@@ -10,6 +10,7 @@ TAG=latest
 
 all: test build
 build: 
+		statik -src=$(PWD)/web/
 		$(GOBUILD) -o $(BINARY_NAME) -v
 test: 
 		$(GOTEST) -v ./...
@@ -20,7 +21,8 @@ clean:
 run:
 		$(GOBUILD) -o $(BINARY_NAME) -v ./...
 		./$(BINARY_NAME)
-
+deps:
+		$(GOGET) -u github.com/rakyll/statik
 
 # Cross compilation
 build-linux:

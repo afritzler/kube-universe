@@ -134,6 +134,12 @@
   version = "v1.1.0"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/rakyll/statik"
+  packages = ["fs"]
+  revision = "fcdcb7b85139b8b9ca1d8ef1d98d8593e90d117f"
+
+[[projects]]
   name = "github.com/spf13/afero"
   packages = [
     ".",
@@ -176,7 +182,7 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "2b6c08872f4b66da917bb4ce98df4f0307330f78"
+  revision = "b49d69b5da943f7ef3c9cf91c8777c1f78a0cc3c"
 
 [[projects]]
   branch = "master"
@@ -198,7 +204,7 @@
     "unix",
     "windows"
   ]
-  revision = "79b0c6888797020a994db17c8510466c72fe75d9"
+  revision = "cbbc999da32df943dac6cd71eb3ee39e1d7838b9"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -272,7 +278,7 @@
     "storage/v1alpha1",
     "storage/v1beta1"
   ]
-  revision = "6ef9db38b7d4d02a221e7af3e7f508ff19706fc6"
+  revision = "b7d77fa220f5130ec63c2ca7167dd9653449c64d"
 
 [[projects]]
   name = "k8s.io/apimachinery"
@@ -375,6 +381,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ad60575ce91f9e1b6d2403be1480bb93ed06826891d22a4552836c53235187be"
+  inputs-digest = "4746b7fc3ec6e315dc9bd817001763ddce16853f1324a4f2ec6c113b85ec618c"
   solver-name = "gps-cdcl"
   solver-version = 1
