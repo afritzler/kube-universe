@@ -182,7 +182,7 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "b49d69b5da943f7ef3c9cf91c8777c1f78a0cc3c"
+  revision = "db7d12313a59cd5b727192a287195e2cdfa40049"
 
 [[projects]]
   branch = "master"
@@ -204,7 +204,7 @@
     "unix",
     "windows"
   ]
-  revision = "cbbc999da32df943dac6cd71eb3ee39e1d7838b9"
+  revision = "f67ecc163a74fbeea4cb1db0a101dcd07201464a"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -323,6 +323,7 @@
   version = "kubernetes-1.10.0"
 
 [[projects]]
+  branch = "release-7.0"
   name = "k8s.io/client-go"
   packages = [
     "discovery",
@@ -375,12 +376,11 @@
     "util/homedir",
     "util/integer"
   ]
-  revision = "989be4278f353e42f26c416c53757d16fcff77db"
-  version = "kubernetes-1.10.1"
+  revision = "33f2870a2b83179c823ddc90e5513f9e5fe43b38"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "4746b7fc3ec6e315dc9bd817001763ddce16853f1324a4f2ec6c113b85ec618c"
+  inputs-digest = "5877c4fe13832bd6e2a96e9e62c81ad10308896e6828cc046c2675cdbad3d093"
   solver-name = "gps-cdcl"
   solver-version = 1
