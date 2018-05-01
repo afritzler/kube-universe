@@ -37,8 +37,8 @@
     "ptypes/duration",
     "ptypes/timestamp"
   ]
-  revision = "925541529c1fa6821df4e44ce2723319eb2be768"
-  version = "v1.0.0"
+  revision = "b4deda0973fb4c70b50d226b1af49f3da59f5265"
+  version = "v1.1.0"
 
 [[projects]]
   branch = "master"
@@ -182,7 +182,7 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "db7d12313a59cd5b727192a287195e2cdfa40049"
+  revision = "ae8bce0030810cf999bb2b9868ae5c7c58e6343b"
 
 [[projects]]
   branch = "master"
@@ -204,7 +204,7 @@
     "unix",
     "windows"
   ]
-  revision = "f67ecc163a74fbeea4cb1db0a101dcd07201464a"
+  revision = "78d5f264b493f125018180c204871ecf58a2dce1"
 
 [[projects]]
   name = "golang.org/x/text"
