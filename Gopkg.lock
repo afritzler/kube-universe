@@ -182,7 +182,7 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "034e5325b6ab92faa14d15c30e86919e911cf8e0"
+  revision = "1a580b3eff7814fc9b40602fd35256c63b50f491"
 
 [[projects]]
   branch = "master"
@@ -203,7 +203,7 @@
     "unix",
     "windows"
   ]
-  revision = "d0faeb539838e250bd0a9db4182d48d4a1915181"
+  revision = "7c87d13f8e835d2fb3a70a2912c811ed0c1d241b"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -277,7 +277,7 @@
     "storage/v1alpha1",
     "storage/v1beta1"
   ]
-  revision = "53d615ae3f440f957cb9989d989d597f047262d9"
+  revision = "fbc8bec270ad675ba2e610dd8f3b70c0f92fd46a"
 
 [[projects]]
   name = "k8s.io/apimachinery"
