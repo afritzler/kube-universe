@@ -53,8 +53,8 @@
     "compiler",
     "extensions"
   ]
-  revision = "ee43cbb60db7bd22502942cccbc39059117352ab"
-  version = "v0.1.0"
+  revision = "7c663266750e7d82587642f65e60bc4083f1f84e"
+  version = "v0.2.0"
 
 [[projects]]
   branch = "master"
@@ -100,8 +100,8 @@
 [[projects]]
   name = "github.com/magiconair/properties"
   packages = ["."]
-  revision = "c3beff4c2358b44d0493c7dda585e7db7ff28ae6"
-  version = "v1.7.6"
+  revision = "c2353362d570a7bfa228149c62842019201cfb71"
+  version = "v1.8.0"
 
 [[projects]]
   branch = "master"
@@ -157,8 +157,8 @@
 [[projects]]
   name = "github.com/spf13/cobra"
   packages = ["."]
-  revision = "a1f051bc3eba734da4772d60e2d677f47cf93ef4"
-  version = "v0.0.2"
+  revision = "ef82de70bb3f60c65fb8eebacbb2d122ef517385"
+  version = "v0.0.3"
 
 [[projects]]
   branch = "master"
@@ -194,7 +194,7 @@
     "http2/hpack",
     "idna"
   ]
-  revision = "2491c5de3490fced2f6cff376127c667efeed857"
+  revision = "8e0cdda24ed423affc8f35c241e5e9b16180338e"
 
 [[projects]]
   branch = "master"
@@ -277,9 +277,10 @@
     "storage/v1alpha1",
     "storage/v1beta1"
   ]
-  revision = "fbc8bec270ad675ba2e610dd8f3b70c0f92fd46a"
+  revision = "184e700b32b7f1b532b9fce8dd8c1f412d297c4b"
 
 [[projects]]
+  branch = "release-1.10"
   name = "k8s.io/apimachinery"
   packages = [
     "pkg/api/errors",
@@ -318,11 +319,9 @@
     "pkg/watch",
     "third_party/forked/golang/reflect"
   ]
-  revision = "302974c03f7e50f16561ba237db776ab93594ef6"
-  version = "kubernetes-1.10.0"
+  revision = "31dade610c053669d8054bfd847da657251e8c1a"
 
 [[projects]]
-  branch = "release-7.0"
   name = "k8s.io/client-go"
   packages = [
     "discovery",
@@ -375,11 +374,12 @@
     "util/homedir",
     "util/integer"
   ]
-  revision = "33f2870a2b83179c823ddc90e5513f9e5fe43b38"
+  revision = "29ae1f00c3d8bb759d6246c357573a9af3c659c1"
+  version = "kubernetes-1.10.3"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "5877c4fe13832bd6e2a96e9e62c81ad10308896e6828cc046c2675cdbad3d093"
+  inputs-digest = "3046aa95c1d8da35c4ce89e4893967203b0ea92843e0bd40f5907730aacb47ac"
   solver-name = "gps-cdcl"
   solver-version = 1
