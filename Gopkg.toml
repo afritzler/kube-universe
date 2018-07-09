@@ -4,7 +4,7 @@
 
 [[constraint]]
   name = "github.com/spf13/cobra"
-  version = "0.0.2"
+  version = "0.0.3"
 
 [[constraint]]
   name = "github.com/spf13/viper"
@@ -12,11 +12,11 @@
 
 [[constraint]]
   name = "k8s.io/apimachinery"
-  version = "kubernetes-1.10.4"
+  version = "kubernetes-1.11.0"
 
 [[constraint]]
   name = "k8s.io/client-go"
-  version = "kubernetes-1.10.4"
+  version = "kubernetes-1.11.0"
 
 [[constraint]]
   name = "github.com/rakyll/statik"
