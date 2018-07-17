@@ -19,8 +19,8 @@
     "proto",
     "sortkeys"
   ]
-  revision = "1adfc126b41513cc696b209667c8656ea7aac67c"
-  version = "v1.0.0"
+  revision = "7d68e886eac4f7e34d0d82241a6273d6c304c5cf"
+  version = "v1.1.0"
 
 [[projects]]
   branch = "master"
@@ -122,7 +122,7 @@
   branch = "master"
   name = "github.com/mitchellh/mapstructure"
   packages = ["."]
-  revision = "bb74f1db0675b241733089d5a1faa5dd8b0ef57b"
+  revision = "f15292f7a699fcc1a38a80977f80a046874ba8ac"
 
 [[projects]]
   name = "github.com/modern-go/concurrent"
@@ -155,10 +155,10 @@
   version = "v2.0.1"
 
 [[projects]]
-  branch = "master"
   name = "github.com/rakyll/statik"
   packages = ["fs"]
-  revision = "eab4de8dac7ec0cb3a6d9218d95ffe441832cb36"
+  revision = "d5ad23bc79e541d7dbff7f7a7cc8f583c15fc384"
+  version = "v0.1.2"
 
 [[projects]]
   name = "github.com/spf13/afero"
@@ -215,7 +215,7 @@
     "http2/hpack",
     "idna"
   ]
-  revision = "6f138e0f60713a248abf7046f1014a3ba90f5341"
+  revision = "d0887baf81f4598189d4e12a37c6da86f0bba4d0"
 
 [[projects]]
   branch = "master"
@@ -224,7 +224,7 @@
     "unix",
     "windows"
   ]
-  revision = "1b2967e3c290b7c545b3db0deeda16e9be4f98a2"
+  revision = "ac767d655b305d4e9612f5f6e33120b9176c4ad4"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -299,7 +299,7 @@
     "storage/v1alpha1",
     "storage/v1beta1"
   ]
-  revision = "8be2a0b24ed0dac9cfc1ac2d987ea16cfcdbecb6"
+  revision = "183f3326a9353bd6d41430fc80f96259331d029c"
 
 [[projects]]
   branch = "release-1.11"
