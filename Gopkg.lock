@@ -37,7 +37,7 @@
   revision = "23def4e6c14b4da8ac2ed8007337bc5eb5007998"
 
 [[projects]]
-  digest = "1:17fe264ee908afc795734e8c4e63db2accabaf57326dbf21763a7d6b86096260"
+  digest = "1:4c0989ca0bcd10799064318923b9bc2db6b4d6338dd75f3f2d86c3511aaaf5cf"
   name = "github.com/golang/protobuf"
   packages = [
     "proto",
@@ -47,8 +47,8 @@
     "ptypes/timestamp",
   ]
   pruneopts = "UT"
-  revision = "b4deda0973fb4c70b50d226b1af49f3da59f5265"
-  version = "v1.1.0"
+  revision = "aa810b61a9c79d51363740d207bb46cf8e620ed5"
+  version = "v1.2.0"
 
 [[projects]]
   branch = "master"
@@ -198,11 +198,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:bc91590d3e20673d5e33267fc140e7dadddde0b84f2e9030547ba86859d2d13e"
+  digest = "1:ea0700160aca4ef099f4e06686a665a87691f4248dddd40796925eda2e46bd64"
   name = "github.com/rakyll/statik"
   packages = ["fs"]
   pruneopts = "UT"
-  revision = "19b88da8fc15428620782ba18f68423130e7ac7d"
+  revision = "aa8a7b1baecd0f31a436bf7956fcdcc609a83035"
 
 [[projects]]
   digest = "1:bd1ae00087d17c5a748660b8e89e1043e1e5479d0fea743352cda2f8dd8c4f84"
@@ -261,11 +261,11 @@
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
   pruneopts = "UT"
-  revision = "de0752318171da717af4ce24d0a2e8626afaeb11"
+  revision = "614d502a4dac94afa3a6ce146bd1736da82514c6"
 
 [[projects]]
   branch = "master"
-  digest = "1:425e53b90bd805997e6fd8cca2eb940131fc684e1c84c6c8b6190ff365b540db"
+  digest = "1:d1209fa9ed40a3a24de8498a9bead59eb3333f16a73fa23ba1fc6677a3cfc9d7"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -275,18 +275,18 @@
     "idna",
   ]
   pruneopts = "UT"
-  revision = "c39426892332e1bb5ec0a434a079bf82f5d30c54"
+  revision = "922f4815f713f213882e8ef45e0d315b164d705c"
 
 [[projects]]
   branch = "master"
-  digest = "1:d756534cd4124a2c7f9b349b2a70a63e53d4e32befae47d6a4bd938a64b92e14"
+  digest = "1:48774faa158e9eaee1ba45aad66434bb0345927b43756a24d4fe4c44ad79e307"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = "UT"
-  revision = "4e1fef5609515ec7a2cee7b5de30ba6d9b438cbf"
+  revision = "3b58ed4ad3395d483fc92d5d14123ce2c3581fec"
 
 [[projects]]
   digest = "1:a2ab62866c75542dd18d2b069fec854577a20211d7c0ea6ae746072a1dccdd18"
@@ -337,7 +337,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:2105cfe56bf20a5244e168a5b3d06be34cdca7e674d2f30a7167bef74af4b778"
+  digest = "1:26cfb6a9af1efbdd64eef8bbc310f82190db0f2b2b909506caac788a56cab579"
   name = "k8s.io/api"
   packages = [
     "admissionregistration/v1alpha1",
@@ -371,7 +371,7 @@
     "storage/v1beta1",
   ]
   pruneopts = "UT"
-  revision = "91bfdbcf0c2cab32ec1236cee4c300793abea68a"
+  revision = "644117120187a38be1542f4598cbcf7a1b19a015"
 
 [[projects]]
   digest = "1:29d5abc33d8cbec19b4cd032a87d28010dd615578dd695a655fc3d5ec3ab86b6"
