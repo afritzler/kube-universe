@@ -374,7 +374,7 @@
   revision = "f456898a08e4bbc5891694118f3819f324de12ff"
 
 [[projects]]
-  digest = "1:29d5abc33d8cbec19b4cd032a87d28010dd615578dd695a655fc3d5ec3ab86b6"
+  digest = "1:9c0e9fbd3926a55ce07cb246b547aabc84a42e0ba2ff707f02153a5c569f37ad"
   name = "k8s.io/apimachinery"
   packages = [
     "pkg/api/errors",
@@ -414,11 +414,11 @@
     "third_party/forked/golang/reflect",
   ]
   pruneopts = "UT"
-  revision = "103fd098999dc9c0c88536f5c9ad2e5da39373ae"
-  version = "kubernetes-1.11.2"
+  revision = "def12e63c512da17043b4f0293f52d1006603d9f"
+  version = "kubernetes-1.11.3"
 
 [[projects]]
-  digest = "1:23583b6bb74c1e6399f4d9239560d36529b2ed43f2730f6a64e6e23521753bb5"
+  digest = "1:1df2f1065c9b3811c96f0de94352bee7226dc77cebf23c3d405a5dac9a228e0a"
   name = "k8s.io/client-go"
   packages = [
     "discovery",
@@ -475,8 +475,8 @@
     "util/integer",
   ]
   pruneopts = "UT"
-  revision = "1f13a808da65775f22cbf47862c4e5898d8f4ca1"
-  version = "kubernetes-1.11.2"
+  revision = "2cefa64ff137e128daeddbd1775cd775708a05bf"
+  version = "kubernetes-1.11.3"
 
 [solve-meta]
   analyzer-name = "dep"
