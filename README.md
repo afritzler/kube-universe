@@ -13,6 +13,11 @@ A __Live Demo Version__ is available [here](https://afritzler.github.io/kube-uni
 
 # Installation and Usage
 
+Before you start you need to install `statik` to vendor the web content into executable
+```
+go get github.com/rakyll/statik
+```
+
 Get the `kube-universe` binary
 ```
 go get github.com/afritzler/kube-universe
