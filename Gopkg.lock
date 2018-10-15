@@ -261,7 +261,7 @@
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
   pruneopts = "UT"
-  revision = "e3636079e1a4c1f337f212cc5cd2aca108f6c900"
+  revision = "0c41d7ab0a0ee717d4590a44bcb987dfd9e183eb"
 
 [[projects]]
   branch = "master"
@@ -276,7 +276,7 @@
     "idna",
   ]
   pruneopts = "UT"
-  revision = "146acd28ed5894421fb5aac80ca93bc1b1f46f87"
+  revision = "49bb7cea24b1df9410e1712aa6433dae904ff66a"
 
 [[projects]]
   branch = "master"
@@ -291,14 +291,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:850d28ab022512e2cd3cf511a77f363c29e22689b4031f2050871f5de47ae4a0"
+  digest = "1:f5aa274a0377f85735edc7fedfb0811d3cbc20af91633797cb359e29c3272271"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = "UT"
-  revision = "4497e2df6f9e69048a54498c7affbbec3294ad47"
+  revision = "fa43e7bc11baaae89f3f902b2b4d832b68234844"
 
 [[projects]]
   digest = "1:a2ab62866c75542dd18d2b069fec854577a20211d7c0ea6ae746072a1dccdd18"
@@ -365,7 +365,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:eace0d597eb2baca8e43442bd14dcf34e07f4f61565f45f802248f97797ba45a"
+  digest = "1:563d1dee8245e168278d7c16bcd1ced84ddc74cb3644cd8713f5c82ef211a3c6"
   name = "k8s.io/api"
   packages = [
     "admissionregistration/v1alpha1",
@@ -401,7 +401,7 @@
     "storage/v1beta1",
   ]
   pruneopts = "UT"
-  revision = "ded30614edd77e131ec4fb340f049041faebe692"
+  revision = "bbf5c193d86c33256702fc781833463a7bca7849"
 
 [[projects]]
   digest = "1:18f352651d6e8578fdbaf29c68334b042439b288b8ae4112c2b2ba9a6e35ced0"
