@@ -276,18 +276,18 @@
     "idna",
   ]
   pruneopts = "UT"
-  revision = "49bb7cea24b1df9410e1712aa6433dae904ff66a"
+  revision = "04a2e542c03f1d053ab3e4d6e5abcd4b66e2be8e"
 
 [[projects]]
   branch = "master"
-  digest = "1:28b360454e161aae382c007449bcb1296087b5b52b4f37623bba0f9f9d7207f4"
+  digest = "1:1bce229fad01cbad9bd00e70ca32afff25ac2cea3dd710d50f88c967c1c3df65"
   name = "golang.org/x/oauth2"
   packages = [
     ".",
     "internal",
   ]
   pruneopts = "UT"
-  revision = "c57b0facaced709681d9f90397429b9430a74754"
+  revision = "9dcd33a902f40452422c2367fefcb95b54f9f8f8"
 
 [[projects]]
   branch = "master"
@@ -401,7 +401,7 @@
     "storage/v1beta1",
   ]
   pruneopts = "UT"
-  revision = "bbf5c193d86c33256702fc781833463a7bca7849"
+  revision = "843ad2d9b9ae703c74f2f43959e6ce0b24cc3185"
 
 [[projects]]
   digest = "1:18f352651d6e8578fdbaf29c68334b042439b288b8ae4112c2b2ba9a6e35ced0"
