@@ -30,11 +30,12 @@ const (
 	nodeType      = "node"
 )
 
+// GetGraph returns the rendered dependency graph
 func GetGraph(kubeconfig string) ([]byte, error) {
 	// use the current context in kubeconfig
 	config, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 	if err != nil {
-		return nil, fmt.Errorf("failed to load kubeconfig: %s\n", err)
+		return nil, fmt.Errorf("failed to load kubeconfig: %s", err)
 	}
 
 	clientset, err := kubernetes.NewForConfig(config)
