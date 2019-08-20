@@ -1,4 +1,4 @@
-// Copyright © 2018 NAME HERE <EMAIL ADDRESS>
+// Copyright © 2018 Andreas Fritzler <andreas.fritzler@gmail.com>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,8 +33,8 @@ var port string
 var serveCmd = &cobra.Command{
 	Use:   "serve",
 	Short: "Starts a webserver to serve the 3D landscape view",
-	Long: `Starts a webserver to serve the 3D landscape view. 
-	
+	Long: `Starts a webserver to serve the 3D landscape view.
+
 By default, the website can be accessed on http://localhost:3000. The JSON representation of
 the landscape graph can be found under http://localhost:3000/graph.`,
 	Run: func(cmd *cobra.Command, args []string) {
