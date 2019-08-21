@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	_ "github.com/afritzler/kube-universe/statik"
 
@@ -60,8 +61,11 @@ func serve() {
 }
 
 func graphResponse(w http.ResponseWriter, r *http.Request) {
-	kubeconfig := rootCmd.Flag("kubeconfig").Value.String()
-	data, err := renderer.GetGraph(kubeconfig)
+	config := os.Getenv("KUBECONFIG")
+	if config == "" {
+		config = rootCmd.Flag("kubeconfig").Value.String()
+	}
+	data, err := renderer.GetGraph(config)
 	if err != nil {
 		fmt.Printf("failed to render landscape graph: %s", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
