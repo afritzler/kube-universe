@@ -50,7 +50,7 @@ func init() {
 }
 
 func serve() {
-	fmt.Printf("started server on localhost:%s\n", port)
+	fmt.Printf("started server on http://localhost:%s\n", port)
 	statikFS, err := fs.New()
 	if err != nil {
 		log.Fatal(err)

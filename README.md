@@ -41,7 +41,7 @@ or just
 kube-universe serve
 ```
 
-if you are using minikube.
+if you are using minikube or have the `KUBECONFIG` environment variable pointing to a corresponding cluster.
 
 The web UI can be accessed via http://localhost:3000 and the rendered graph under http://localhost:3000/graph.
 With the `--port` flag you can also specify under which port the kube universe server should be exposed (default is 3000).
@@ -72,4 +72,4 @@ make docker-build
 
 ## Acknowledgements
 
-Kube universe is using [3d-force-graph](https://github.com/vasturiano/3d-force-graph) for rendering. 
+Kube universe is using [3d-force-graph](https://github.com/vasturiano/3d-force-graph) for rendering.
