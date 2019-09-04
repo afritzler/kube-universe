@@ -10,7 +10,7 @@ TAG=latest
 
 all: test build
 build: 
-		statik -src=$(PWD)/web/
+		statik -f -src=$(PWD)/web/
 		$(GOBUILD) -o $(BINARY_NAME) -v
 test: 
 		$(GOTEST) -v ./...
