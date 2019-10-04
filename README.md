@@ -4,6 +4,8 @@
 
 ---
 
+![demo](images/demo.png)
+
 ## Overview
 
 Kube-Universe renders a Kubernetes cluster into a dynamic 3D graph. An example landscape visualization can be found [here](images/universe.png).
