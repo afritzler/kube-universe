@@ -34,6 +34,7 @@ var rootCmd = &cobra.Command{
 	Long:  `3D representation of a Kubernetes cluster`,
 }
 
+// Execute runs the main command loop.
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)

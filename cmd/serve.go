@@ -20,8 +20,6 @@ import (
 	"net/http"
 	"os"
 
-	_ "github.com/afritzler/kube-universe/statik"
-
 	renderer "github.com/afritzler/kube-universe/pkg/renderer"
 	"github.com/rakyll/statik/fs"
 	"github.com/spf13/cobra"
