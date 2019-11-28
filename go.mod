@@ -12,15 +12,15 @@ require (
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/viper v1.5.0
-	golang.org/x/crypto v0.0.0-20191111213947-16651526fdb4 // indirect
-	golang.org/x/net v0.0.0-20191109021931-daa7c04131f5 // indirect
-	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45 // indirect
-	golang.org/x/sys v0.0.0-20191110163157-d32e6e3b99c4 // indirect
+	golang.org/x/crypto v0.0.0-20191128160524-b544559bb6d1 // indirect
+	golang.org/x/net v0.0.0-20191126235420-ef20fe5d7933 // indirect
+	golang.org/x/oauth2 v0.0.0-20191122200657-5d9234df094c // indirect
+	golang.org/x/sys v0.0.0-20191128015809-6d18c012aee9 // indirect
 	golang.org/x/time v0.0.0-20191024005414-555d28b269f0 // indirect
 	google.golang.org/appengine v1.6.5 // indirect
-	gopkg.in/yaml.v2 v2.2.5 // indirect
-	k8s.io/api v0.0.0-20191112020540-7f9008e52f64 // indirect
-	k8s.io/apimachinery v0.0.0-20191111054156-6eb29fdf75dc
+	gopkg.in/yaml.v2 v2.2.7 // indirect
+	k8s.io/api v0.0.0-20191121015604-11707872ac1c // indirect
+	k8s.io/apimachinery v0.0.0-20191123233150-4c4803ed55e3
 	k8s.io/client-go v0.0.0-20190819141724-e14f31a72a77
-	k8s.io/utils v0.0.0-20191030222137-2b95a09bc58d // indirect
+	k8s.io/utils v0.0.0-20191114200735-6ca3b61696b6 // indirect
 )

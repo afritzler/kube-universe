@@ -22,7 +22,7 @@ A __Live Demo Version__ is available [here](https://afritzler.github.io/kube-uni
 Before you start you need to install `statik` to vendor the web content into executable
 
 ```bash
-go get github.com/rakyll/statik
+go get -u github.com/rakyll/statik
 ```
 
 Get the `kube-universe` binary
