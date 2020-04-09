@@ -24,6 +24,8 @@ import (
 	"github.com/rakyll/statik/fs"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+
+	_ "github.com/afritzler/kube-universe/statik"
 )
 
 var port string

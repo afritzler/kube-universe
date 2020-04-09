@@ -31,7 +31,7 @@ import (
 	"time"
 )
 
-var zipData string
+var zipData = map[string]string{}
 
 // file holds unzipped read-only file contents and file metadata.
 type file struct {
@@ -45,19 +45,40 @@ type statikFS struct {
 	dirs  map[string][]string
 }
 
+const defaultNamespace = "default"
+
+// IsDefaultNamespace returns true if the assetNamespace is
+// the default one
+func IsDefaultNamespace(assetNamespace string) bool {
+	return assetNamespace == defaultNamespace
+}
+
 // Register registers zip contents data, later used to initialize
 // the statik file system.
 func Register(data string) {
-	zipData = data
+	RegisterWithNamespace(defaultNamespace, data)
 }
 
-// New creates a new file system with the registered zip contents data.
+// RegisterWithNamespace registers zip contents data and set asset namespace,
+// later used to initialize the statik file system.
+func RegisterWithNamespace(assetNamespace string, data string) {
+	zipData[assetNamespace] = data
+}
+
+// New creates a new file system with the default registered zip contents data.
 // It unzips all files and stores them in an in-memory map.
 func New() (http.FileSystem, error) {
-	if zipData == "" {
+	return NewWithNamespace(defaultNamespace)
+}
+
+// NewWithNamespace creates a new file system with the registered zip contents data.
+// It unzips all files and stores them in an in-memory map.
+func NewWithNamespace(assetNamespace string) (http.FileSystem, error) {
+	asset, ok := zipData[assetNamespace]
+	if !ok {
 		return nil, errors.New("statik/fs: no zip data registered")
 	}
-	zipReader, err := zip.NewReader(strings.NewReader(zipData), int64(len(zipData)))
+	zipReader, err := zip.NewReader(strings.NewReader(asset), int64(len(asset)))
 	if err != nil {
 		return nil, err
 	}
@@ -109,21 +130,12 @@ func (di dirInfo) ModTime() time.Time { return time.Time{} }
 func (di dirInfo) IsDir() bool        { return true }
 func (di dirInfo) Sys() interface{}   { return nil }
 
-func unzip(zf *zip.File) ([]byte, error) {
-	rc, err := zf.Open()
-	if err != nil {
-		return nil, err
-	}
-	defer rc.Close()
-	return ioutil.ReadAll(rc)
-}
-
 // Open returns a file matching the given file name, or os.ErrNotExists if
 // no file matching the given file name is found in the archive.
 // If a directory is requested, Open returns the file named "index.html"
 // in the requested directory, if that file exists.
 func (fs *statikFS) Open(name string) (http.File, error) {
-	name = filepath.Clean(name)
+	name = filepath.ToSlash(filepath.Clean(name))
 	if f, ok := fs.files[name]; ok {
 		return newHTTPFile(f), nil
 	}
@@ -214,4 +226,13 @@ func (f *httpFile) Readdir(count int) ([]os.FileInfo, error) {
 
 func (f *httpFile) Close() error {
 	return nil
+}
+
+func unzip(zf *zip.File) ([]byte, error) {
+	rc, err := zf.Open()
+	if err != nil {
+		return nil, err
+	}
+	defer rc.Close()
+	return ioutil.ReadAll(rc)
 }

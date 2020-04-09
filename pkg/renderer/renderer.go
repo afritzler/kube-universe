@@ -15,6 +15,7 @@
 package pkg
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 
@@ -34,6 +35,7 @@ const (
 func GetGraph(kubeconfig string) ([]byte, error) {
 	// use the current context in kubeconfig
 	config, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
+	ctx := context.Background()
 	if err != nil {
 		return nil, fmt.Errorf("failed to load kubeconfig: %s", err)
 	}
@@ -46,7 +48,7 @@ func GetGraph(kubeconfig string) ([]byte, error) {
 	nodes := make(map[string]*kutype.Node)
 	links := make([]kutype.Link, 0)
 
-	namespaces, err := clientset.CoreV1().Namespaces().List(metav1.ListOptions{})
+	namespaces, err := clientset.CoreV1().Namespaces().List(ctx, metav1.ListOptions{})
 	if err != nil {
 		return nil, fmt.Errorf("failed to get namespaces: %s", err)
 	}
@@ -55,7 +57,7 @@ func GetGraph(kubeconfig string) ([]byte, error) {
 		nodes[key] = &kutype.Node{Id: key, Name: n.Name, Type: namespaceType, Namespace: n.Namespace}
 	}
 
-	pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{})
+	pods, err := clientset.CoreV1().Pods("").List(ctx, metav1.ListOptions{})
 	if err != nil {
 		return nil, fmt.Errorf("failed to get pods: %s", err)
 	}
@@ -74,7 +76,7 @@ func GetGraph(kubeconfig string) ([]byte, error) {
 		links = append(links, kutype.Link{Source: podKey, Target: nodeKey, Value: 0})
 	}
 
-	clusterNodes, err := clientset.CoreV1().Nodes().List(metav1.ListOptions{})
+	clusterNodes, err := clientset.CoreV1().Nodes().List(ctx, metav1.ListOptions{})
 	if err != nil {
 		return nil, fmt.Errorf("failed to get nodes: %s", err)
 	}
