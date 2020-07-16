@@ -3,8 +3,8 @@ module github.com/afritzler/kube-universe
 go 1.14
 
 replace (
-	k8s.io/apimachinery => k8s.io/apimachinery v0.18.4
-	k8s.io/client-go => k8s.io/client-go v0.18.4
+	k8s.io/apimachinery => k8s.io/apimachinery v0.18.6
+	k8s.io/client-go => k8s.io/client-go v0.18.6
 )
 
 require (
@@ -30,7 +30,7 @@ require (
 	google.golang.org/appengine v1.6.6 // indirect
 	google.golang.org/protobuf v1.24.0 // indirect
 	gopkg.in/ini.v1 v1.57.0 // indirect
-	k8s.io/apimachinery v0.18.4
+	k8s.io/apimachinery v0.18.6
 	k8s.io/client-go v1.5.1
 	k8s.io/utils v0.0.0-20200603063816-c1c6865ac451 // indirect
 )
