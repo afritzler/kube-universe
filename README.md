@@ -1,6 +1,6 @@
 # kube-universe
 
-![kube universe logo](images/logo.png)
+![kube universe logo](images/logo_small.png)
 
 ---
 
@@ -50,7 +50,7 @@ With the `--port` flag you can also specify under which port the kube universe s
 
 ## Development
 
-To build and run the kube universe
+To build and run `kube-universe` from source
 
 ```bash
 git clone https://github.com/afritzler/kube-universe $GOPATH/src/github.com/afritzler/kube-universe
