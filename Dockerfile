@@ -1,4 +1,4 @@
-FROM golang:1.12.8
+FROM golang:1.16.2
 WORKDIR /go/src/github.com/afritzler/kube-universe
 RUN go get github.com/rakyll/statik
 COPY . .
