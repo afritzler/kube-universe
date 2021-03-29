@@ -16,4 +16,4 @@ jobs:
       env:
         GO111MODULE: "on"
       with:
-        args: build-linux
+        args: make build-linux
