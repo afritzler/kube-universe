@@ -16,6 +16,6 @@ require (
 	github.com/spf13/viper v1.7.1
 	google.golang.org/appengine v1.6.6 // indirect
 	gopkg.in/ini.v1 v1.60.0 // indirect
-	k8s.io/apimachinery v0.20.5
+	k8s.io/apimachinery v0.21.0
 	k8s.io/client-go v0.20.5
 )
