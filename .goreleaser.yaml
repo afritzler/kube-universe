@@ -1,0 +1,38 @@
+before:
+  hooks:
+  - go mod download
+builds:
+-
+  id: kube-universe
+  dir: .
+  main: main.go
+  binary: kube-universe
+  ldflags:
+  - -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}} -X main.builtBy=goreleaser
+  env:
+  - CGO_ENABLED=0
+  goos:
+  - linux
+  - darwin
+  - windows
+  goarch:
+  - amd64
+  - 386
+  - arm
+  - arm64
+  goarm:
+  - 6
+  - 7
+  ignore:
+  - goos: darwin
+    goarch: 386
+
+archives:
+- format: binary
+
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  skip: true
