@@ -1,11 +1,11 @@
-FROM golang:1.16.3
+FROM golang:1.16.3 AS builder
 WORKDIR /go/src/github.com/afritzler/kube-universe
 RUN go get github.com/rakyll/statik
 COPY . .
 RUN make
 
-FROM alpine:latest
-RUN apk --no-cache add ca-certificates
+FROM alpine:3.13.5
+RUN apk --no-cache add ca-certificates=20191127-r5
 WORKDIR /root/
-COPY --from=0 /go/src/github.com/afritzler/kube-universe/kube-universe .
+COPY --from=builder /go/src/github.com/afritzler/kube-universe/kube-universe .
 CMD ["./kube-universe"]
