@@ -7,7 +7,7 @@ require (
 	github.com/imdario/mergo v0.3.11 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/rakyll/statik v0.1.7
-	github.com/spf13/cobra v1.1.3
+	github.com/spf13/cobra v1.2.0
 	github.com/spf13/viper v1.8.1
 	k8s.io/apimachinery v0.21.2
 	k8s.io/client-go v0.21.2
