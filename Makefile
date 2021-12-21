@@ -9,12 +9,12 @@ IMAGE=afritzler/kube-universe
 TAG=latest
 
 all: test build
-build: 
+build: deps
 		statik -f -src=$(PWD)/web/
 		$(GOBUILD) -o $(BINARY_NAME) -v
-test: 
+test:
 		$(GOTEST) -v ./...
-clean: 
+clean:
 		$(GOCLEAN)
 		rm -f $(BINARY_NAME)
 		rm -f $(BINARY_UNIX)
@@ -22,7 +22,7 @@ run:
 		$(GOBUILD) -o $(BINARY_NAME) -v ./...
 		./$(BINARY_NAME)
 deps:
-		$(GOGET) -u github.com/rakyll/statik
+		$(GOGET) -d github.com/rakyll/statik
 
 # Cross compilation
 build-linux:
