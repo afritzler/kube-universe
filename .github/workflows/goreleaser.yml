@@ -4,13 +4,11 @@ on:
   release:
     types:
       - published
-  push:
-    tags:
-      - '*'
 
 jobs:
-  goreleaser:
+  goreleaser-publish:
     runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
     steps:
       - name: Checkout
         uses: actions/checkout@v2
