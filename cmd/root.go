@@ -51,7 +51,9 @@ func init() {
 	} else {
 		rootCmd.PersistentFlags().StringVarP(&kubeconfig, "kubeconfig", "k", "", "absolute path to the kubeconfig file")
 	}
-	viper.BindPFlag("kubeconfig", rootCmd.PersistentFlags().Lookup("kubeconfig"))
+	if err := viper.BindPFlag("kubeconfig", rootCmd.PersistentFlags().Lookup("kubeconfig")); err != nil {
+		panic(fmt.Sprintf("faild to bind kubeconfig flag: %s", err))
+	}
 }
 
 // initConfig reads in config file and ENV variables if set.

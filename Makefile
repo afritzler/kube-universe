@@ -23,7 +23,12 @@ run:
 		./$(BINARY_NAME)
 deps:
 		$(GOGET) -d github.com/rakyll/statik
-
+fmt: ## Run go fmt against code.
+		go fmt ./...
+vet: ## Run go vet against code.
+		go vet ./...
+lint:
+		golangci-lint run ./...
 # Cross compilation
 build-linux:
 		CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_UNIX) -v
