@@ -46,7 +46,9 @@ the landscape graph can be found under http://localhost:3000/graph.`,
 func init() {
 	rootCmd.AddCommand(serveCmd)
 	serveCmd.PersistentFlags().StringVarP(&port, "port", "p", "3000", "Port on which the server should listen")
-	viper.BindPFlag("port", serveCmd.PersistentFlags().Lookup("port"))
+	if err := viper.BindPFlag("port", serveCmd.PersistentFlags().Lookup("port")); err != nil {
+		panic(fmt.Sprintf("faild to bind port flag: %s", err))
+	}
 }
 
 func serve() {
@@ -56,23 +58,25 @@ func serve() {
 		log.Fatal(err)
 	}
 	http.Handle("/", http.FileServer(statikFS))
-	http.HandleFunc("/graph", graphResponse)
-	http.ListenAndServe(getPort(), nil)
-}
-
-func graphResponse(w http.ResponseWriter, r *http.Request) {
-	config := os.Getenv("KUBECONFIG")
-	if config == "" {
-		config = rootCmd.Flag("kubeconfig").Value.String()
+	http.HandleFunc("/graph", func(writer http.ResponseWriter, request *http.Request) {
+		config := os.Getenv("KUBECONFIG")
+		if config == "" {
+			config = rootCmd.Flag("kubeconfig").Value.String()
+		}
+		data, err := renderer.GetGraph(config)
+		if err != nil {
+			fmt.Printf("failed to render landscape graph: %s", err)
+			http.Error(writer, err.Error(), http.StatusInternalServerError)
+			fmt.Printf("failed to render graph: %s", err)
+		}
+		writer.Header().Set("Content-Type", "application/json")
+		if _, err := writer.Write(data); err != nil {
+			fmt.Printf("faild to write response data: %s", err)
+		}
+	})
+	if err := http.ListenAndServe(getPort(), nil); err != nil {
+		panic(fmt.Sprintf("faild to start server: %s", err))
 	}
-	data, err := renderer.GetGraph(config)
-	if err != nil {
-		fmt.Printf("failed to render landscape graph: %s", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(data)
 }
 
 func getPort() string {
