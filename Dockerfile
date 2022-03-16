@@ -1,4 +1,4 @@
-FROM golang:1.17.8 AS builder
+FROM golang:1.18.0 AS builder
 WORKDIR /go/src/github.com/afritzler/kube-universe
 RUN go get github.com/rakyll/statik
 COPY . .
