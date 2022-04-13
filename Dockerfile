@@ -1,4 +1,4 @@
-FROM golang:1.18.0 AS builder
+FROM golang:1.18.1 AS builder
 WORKDIR /workspace
 RUN go install github.com/rakyll/statik@latest
 
