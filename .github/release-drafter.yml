@@ -56,11 +56,11 @@ template: |
   To pull the image run
 
   ```bash
-  docker pull ghcr.io/afritzler/kube-universe:$RESOLVED_VERSION
+  docker pull ghcr.io/afritzler/kube-universe:v$RESOLVED_VERSION
   ```
 
   Using the image as a base image in your Dockerfile
 
   ```
-  FROM ghcr.io/afritzler/kube-universe:$RESOLVED_VERSION
+  FROM ghcr.io/afritzler/kube-universe:v$RESOLVED_VERSION
   ```
