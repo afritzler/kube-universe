@@ -1,4 +1,4 @@
-name-template: 'v$RESOLVED_VERSION 🌈'
+name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'
@@ -50,3 +50,17 @@ template: |
   ## Changes
 
   $CHANGES
+
+  ## Usage
+
+  To pull the image run
+
+  ```bash
+  docker pull ghcr.io/afritzler/kube-universe:$RESOLVED_VERSION
+  ```
+
+  Using the image as a base image in your Dockerfile
+
+  ```
+  FROM ghcr.io/afritzler/kube-universe:$RESOLVED_VERSION
+  ```
