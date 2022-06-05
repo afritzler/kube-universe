@@ -7,7 +7,7 @@ require (
 	github.com/rakyll/statik v0.1.7
 	github.com/spf13/cobra v1.4.0
 	github.com/spf13/viper v1.12.0
-	k8s.io/apimachinery v0.24.0
+	k8s.io/apimachinery v0.24.1
 	k8s.io/client-go v0.24.0
 )
 
