@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/rakyll/statik v0.1.7
-	github.com/spf13/cobra v1.5.0
+	github.com/spf13/cobra v1.6.0
 	github.com/spf13/viper v1.13.0
 	k8s.io/apimachinery v0.25.2
 	k8s.io/client-go v0.25.2
@@ -27,7 +27,7 @@ require (
 	github.com/google/gofuzz v1.1.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/imdario/mergo v0.3.11 // indirect
-	github.com/inconshreveable/mousetrap v1.0.0 // indirect
+	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/magiconair/properties v1.8.6 // indirect
