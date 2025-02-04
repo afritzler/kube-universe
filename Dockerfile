@@ -1,5 +1,5 @@
 # Build the manager binary
-FROM --platform=$BUILDPLATFORM golang:1.23.5 as builder
+FROM --platform=$BUILDPLATFORM golang:1.24rc2 as builder
 
 ARG GOARCH=''
 ARG GITHUB_PAT=''
