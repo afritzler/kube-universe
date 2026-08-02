@@ -50,25 +50,55 @@ With the `--port` flag you can also specify under which port the kube universe s
 
 ## Development
 
-To build and run `kube-universe` from source
+## Installation
+
+### Using `go install` (Go 1.16+)
 
 ```bash
-git clone https://github.com/afritzler/kube-universe $GOPATH/src/github.com/afritzler/kube-universe
-cd $GOPATH/src/github.com/afritzler/kube-universe
-go run *.go serve --kubeconfig=PATH_TO_MY_KUBECONFIG
+go install github.com/afritzler/kube-universe@latest
 ```
 
-or to build and run it using the executable
+### Using Docker
 
+```bash
+docker run -it --rm -v $HOME/.kube/config:/root/.kube/config ghcr.io/afritzler/kube-universe:latest serve
+```
+
+## Usage
+
+Start `kube-universe` locally:
+
+```bash
+kube-universe serve --kubeconfig=PATH_TO_KUBECONFIG
+```
+
+If you are using a local cluster (like minikube or kind) or have the `KUBECONFIG` environment variable set, you can simply run:
+
+```bash
+kube-universe serve
+```
+
+The web UI will be accessible at `http://localhost:3000`, and the raw JSON graph at `http://localhost:3000/graph`.
+You can change the default port using the `--port` flag (default is `3000`).
+
+## Development
+
+To build and run `kube-universe` from source:
+
+```bash
+git clone https://github.com/afritzler/kube-universe.git
+cd kube-universe
+go run . serve --kubeconfig=PATH_TO_KUBECONFIG
+```
+
+Or build the binary:
 ```bash
 make
-./kube-universe serve --kubeconfig=PATH_TO_MY_KUBECONFIG
+./kube-universe serve --kubeconfig=PATH_TO_KUBECONFIG
 ```
 
-To build the Docker image
-
+To build the Docker image locally:
 ```bash
-cd $GOPATH/src/github.com/afritzler/kube-universe
 make docker-build
 ```
 
